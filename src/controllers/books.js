@@ -8,7 +8,11 @@ export const getAllBooks = async () => {
 			{
 				path: "comments",
 				model: "Comment",
-				select: "author message datetime"
+				select: "author message datetime",
+				populate: {
+					path: "author",
+					model: "Person"
+				}
 			}
 		]);
 	return books;
