@@ -1,0 +1,1 @@
+mongoimport --db bookstore --collection books --type json --file mongo.books.json --jsonArray
