@@ -11,7 +11,10 @@ app.set("views", path.join(__dirname, "./src/views"));
 app.use(express.static(staticDirectory));
 
 app.get('/', async (req, res) => {
-    res.send('testing');
+    // res.send('testing');
+    res.render('index',{
+        pageTitle: "Tech Bookstore"
+    });
 });
 
 
