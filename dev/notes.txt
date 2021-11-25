@@ -1,1 +1,2 @@
 mongoimport --db bookstore --collection books --type json --file mongo.books.json --jsonArray
+mongoimport --db bookstore --collection persons --type json --file mongo.persons.json --jsonArray
