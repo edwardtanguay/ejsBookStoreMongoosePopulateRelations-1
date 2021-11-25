@@ -1,3 +1,10 @@
 mongoimport --db bookstore --collection books --type json --file mongo.books.json --jsonArray
 mongoimport --db bookstore --collection persons --type json --file mongo.persons.json --jsonArray
 mongoimport --db bookstore --collection comments --type json --file mongo.comments.json --jsonArray
+
+
+db.books.updateMany({}, {
+    $set: {
+        "comments": ["619fb10d9137307419b4b077"]
+    }
+})

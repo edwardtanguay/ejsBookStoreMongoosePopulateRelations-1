@@ -7,7 +7,7 @@ mongoose.connect("mongodb://localhost:27017/bookstore");
 
 const app = express();
 const __dirname = path.resolve(path.dirname(""));
-const port = 3047;
+const port = 3057;
 const staticDirectory = path.join(__dirname, "./public");
 
 app.set("view engine", "ejs");
@@ -16,9 +16,10 @@ app.use(express.static(staticDirectory));
 
 app.get("/", async (req, res) => {
   const books = await BooksController.getAllBooks();
+  console.log(books[0].comments);
   res.render("index", {
     pageTitle: "Tech Bookstore",
-    books, // alternative books:books
+    books
   });
 });
 
