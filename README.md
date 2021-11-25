@@ -4,6 +4,7 @@ This site shows a book store that displays books, the information of which comes
 
 This site also uses the MVC pattern (Model-View-Controller) to organize how data is retrieved, e.g. a **Controller** queries **Models** for data, and then passes this data to the (EJS) **Views**.
 
+## This version also uses *Mongoose deep population* to display comments on books that have authors which referenced in the **persons** collection:
 ![grafik](https://user-images.githubusercontent.com/446574/143496155-05a00911-d115-481b-a9ef-38b896274d4d.png)
 
 ### Source:  [onespace](https://onespace.netlify.app/howtos?id=442)
