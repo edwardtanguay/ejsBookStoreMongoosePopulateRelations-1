@@ -87,3 +87,8 @@ db.books.updateMany({}, {
   "datetime": "2021-11-24 21:00:41",
   "author": "619ece858558d24cf378e67e"
 }]
+
+
+mongoimport --host cluster0-shard-00-01.ogshn.mongodb.net:27017 --db mongoose-bookstore --collection persons --type json --file mongo.persons.json --jsonArray --authenticationDatabase admin --ssl --username mainuser
+mongoimport --host cluster0-shard-00-01.ogshn.mongodb.net:27017 --db mongoose-bookstore --collection books --type json --file mongo.books.json --jsonArray --authenticationDatabase admin --ssl --username mainuser
+mongoimport --host cluster0-shard-00-01.ogshn.mongodb.net:27017 --db mongoose-bookstore --collection comments --type json --file mongo.comments.json --jsonArray --authenticationDatabase admin --ssl --username mainuser
