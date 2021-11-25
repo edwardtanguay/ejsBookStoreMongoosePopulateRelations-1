@@ -10,7 +10,7 @@ mongoose.connect(process.env.MONGODB_CONNECT);
 
 const app = express();
 const __dirname = path.resolve(path.dirname(""));
-const port = 3057;
+const port = dotenv.env.PORT || 3057;
 const staticDirectory = path.join(__dirname, "./public");
 
 app.set("view engine", "ejs");
