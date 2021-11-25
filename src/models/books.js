@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-// import PersonsModel from '../models/persons.js';
+import PersonsModel from '../models/persons.js';
  
 const Schema = mongoose.Schema;
  
